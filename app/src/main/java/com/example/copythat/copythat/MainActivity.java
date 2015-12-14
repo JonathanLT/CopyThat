@@ -137,13 +137,13 @@ public class MainActivity extends Activity {
                             fos.write((byte)16);
                             fos.write(0);
                             fos.write('d');
-                            fos.write('a');                 // 00 - RIFF
-                            fos.write('t');                 // 00 - RIFF
-                            fos.write('a');                 // 00 - RIFF
-                            fos.write((byte)(MainActivity.FullBuffer.length & 0xff)); // 0 - size of this chunk
-                            fos.write((byte)((MainActivity.FullBuffer.length >> 8) & 0xff)); // 0 - size of this chunk
-                            fos.write((byte)((MainActivity.FullBuffer.length >> 16) & 0xff)); // 0 - size of this chunk
-                            fos.write((byte)((MainActivity.FullBuffer.length >> 24) & 0xff)); // 0 - size of this chunk
+                            fos.write('a');
+                            fos.write('t');
+                            fos.write('a');
+                            fos.write((byte)(MainActivity.FullBuffer.length & 0xff));
+                            fos.write((byte)((MainActivity.FullBuffer.length >> 8) & 0xff));
+                            fos.write((byte)((MainActivity.FullBuffer.length >> 16) & 0xff));
+                            fos.write((byte)((MainActivity.FullBuffer.length >> 24) & 0xff));
                             fos.write(bytebuf.array());
                             fos.flush();
                             fos.close();
